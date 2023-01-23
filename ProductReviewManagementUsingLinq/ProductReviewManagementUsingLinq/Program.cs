@@ -34,7 +34,8 @@ namespace ProductReviewManagementUsingLinq
 
             //uc3
             ProductManagement management = new ProductManagement();
-            management.SelectedRecords(productReviewlist);
+            //management.SelectedRecords(productReviewlist);
+            management.RetriviewCountOfRecord(productReviewlist);
 
         }
     }
