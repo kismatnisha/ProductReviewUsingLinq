@@ -22,5 +22,20 @@ namespace ProductReviewManagementUsingLinq
                 Console.WriteLine("Product Id :" + productReview.ProductId + "\t" + "User Id :" + productReview.UserId + "\t" + "Rating :" + productReview.Rating + "\t" + "Review :" + productReview.Review + "\t" + "Is Like :" + productReview.isLike);
             }
         }
+        public void SelectedRecords(List<ProductReview> review)
+        {
+
+            var recordedData = from products in review
+                               where (products.ProductId == 1 && products.Rating > 3) ||
+                                (products.ProductId == 4 && products.Rating > 3) ||
+                                 (products.ProductId == 9 && products.Rating > 3)
+                               select products;
+            foreach (var productReview in recordedData)
+            {
+                Console.WriteLine("Product Id :" + productReview.ProductId + "\t" + "User Id :" + productReview.UserId + "\t" + "Rating :" + productReview.Rating + "\t" + "Review :" + productReview.Review + "\t" + "Is Like :" + productReview.isLike);
+            }
+
+        }
     }
 }
+

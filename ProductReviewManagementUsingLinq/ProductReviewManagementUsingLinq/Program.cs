@@ -27,8 +27,15 @@ namespace ProductReviewManagementUsingLinq
             //}
             //Console.ReadLine();
 
-            ProductManagement.RetrieveTopThreeRatedRecords(productReviewlist);
-            Console.ReadLine();
+
+            //uc2
+            // ProductManagement.RetrieveTopThreeRatedRecords(productReviewlist);
+            //Console.ReadLine();
+
+            //uc3
+            ProductManagement management = new ProductManagement();
+            management.SelectedRecords(productReviewlist);
+
         }
     }
 }
